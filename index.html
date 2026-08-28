@@ -91,15 +91,35 @@
           </span>
         </div>
 
-        <!-- Download CV (PDF) -->
-        <div class="pt-2">
-          <a href="https://drive.google.com/uc?export=download&id=1qZZG6KfFjqcC3IBrjwQhdxFjJxS3WrQ7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#fbcfe8] text-black text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-[#f472b6] transition shadow-sm">
-            <i data-lucide="download" class="w-4 h-4 text-black"></i> Download CV (PDF)
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Style untuk tombol Download CV */
+        .cv-download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff; /* Warna tombol */
+            color: #ffffff;            /* Warna teks */
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Efek saat tombol di-hover */
+        .cv-download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Download CV -->
+    <a href="CV_Nurul_Nadjmie.pdf" download="CV_Nurul_Nadjmie.pdf" class="cv-download-btn">
+        Download CV
+    </a>
+
+</body>
+</html>
 
   <!-- SECOND BUTTON: PROJECTS SECTION -->
   <section id="projects" class="bg-white py-16 border-b border-slate-200">
