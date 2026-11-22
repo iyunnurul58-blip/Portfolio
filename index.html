@@ -55,17 +55,44 @@
     .project-card{display:flex;flex-direction:column;gap:8px;height:100%}.project-art{height:134px;border-radius:12px;background:linear-gradient(115deg,#fce7f3,#f1f5f9);display:grid;place-items:center;padding:14px;text-align:center;color:#9d174d;font-size:1.06rem;font-weight:800;letter-spacing:-.02em}
     .project-card h3{margin:4px 0}.project-card p{margin:0;font-size:.86rem}.project-card .actions{margin-top:auto;padding-top:10px}
     .micro{font-size:.73rem;color:var(--muted)}
-    .radar-shell{padding:24px}.radar-controls{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;margin-bottom:14px}
     .label{font-size:.79rem;font-weight:800;margin-bottom:6px;display:block;color:#334155}
-    .select{display:block;width:100%;max-width:540px;border:1px solid #cbd5e1;background:#fff;color:#0f172a;border-radius:10px;padding:11px 12px}
-    .radar-body{display:grid;grid-template-columns:1.08fr 1fr;gap:22px;align-items:start}
-    .radar-svg{display:block;width:100%;max-width:490px;margin:0 auto;overflow:visible}
-    .axis-btn{cursor:pointer}.axis-btn text{fill:#475569;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:12px}
-    .axis-btn.selected text,.axis-btn:hover text{fill:#9d174d}.axis-btn.selected circle{fill:#fce7f3;stroke:#d94682;stroke-width:1.5}
-    .radar-mesh{stroke:#d5dbe4;fill:none;stroke-width:1.1}
-    .radar-feature{fill:rgba(219,39,119,.19);stroke:#be185d;stroke-width:3;stroke-linejoin:round;transition:all .25s ease}
-    .radar-outline{fill:none;stroke:#cbd5e1;stroke-width:2;stroke-dasharray:5 6}
-    .capability-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+    .select{display:block;width:100%;border:1px solid #cbd5e1;background:#fff;color:#0f172a;border-radius:10px;padding:11px 12px;font-size:.84rem}
+    /* Capability Set: six structural capability cards form one house. */
+    .capability-section{padding:30px 0 34px}
+    .capability-section .section-header{max-width:none;margin-bottom:14px}
+    .capability-section .section-header .eyebrow{margin-bottom:5px}
+    .capability-section .section-header h2{font-size:clamp(1.6rem,2.5vw,2.05rem);margin-bottom:6px}
+    .capability-section .section-header p{font-size:.86rem;line-height:1.55}
+    .house-shell{padding:17px 24px;box-shadow:none}
+    .house-layout{display:grid;grid-template-columns:minmax(250px,.76fr) minmax(420px,1.24fr);gap:26px;align-items:center}
+    .house-left{min-width:0;padding:14px 12px 14px 4px}
+    .house-pick{max-width:395px}
+    .house-pick .label{font-size:.83rem;margin-bottom:9px}
+    .house-pick .select{padding:12px 14px}
+    /* Compact context area: names the eight projects by group, or briefly
+       explains how the selected project brings capabilities together. */
+    .house-story{margin:14px 0 9px;padding:13px 15px;border:1px solid #f4d5e4;border-radius:13px;background:#fff9fc;max-width:395px}
+    .house-story-title{font-size:.84rem;font-weight:800;line-height:1.35;color:#831843;margin:0 0 5px}
+    .house-story-copy{font-size:.79rem;line-height:1.5;color:#475569;margin:0}
+    .house-project-groups{display:grid;gap:7px;margin-top:12px}
+    .house-project-group{display:grid;grid-template-columns:87px minmax(0,1fr);gap:6px;align-items:start}
+    .house-project-group strong{font-size:.69rem;line-height:1.45;color:#9d174d;font-weight:800}
+    .house-project-group span{font-size:.73rem;line-height:1.42;color:#334155}
+    .house-nav{display:inline-block;margin:2px 0 0 2px;font-size:.81rem}
+    .house-stage{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .house-roof{width:100%;max-width:610px;display:block;height:108px;overflow:visible;filter:drop-shadow(0 2px 0 rgba(202,127,164,.07))}
+    .house-frame{width:87%;max-width:530px;min-height:230px;margin:-4px auto 0;border:4px solid #d99eb9;border-top:0;border-radius:0 0 15px 15px;background:#fff8fb;padding:9px 11px 12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:7px;box-shadow:0 9px 20px rgba(157,23,77,.055)}
+    .house-cell{min-height:66px;border:1.5px dashed #eccfdd;border-radius:10px;background:#fff;display:grid;place-items:stretch;overflow:hidden;transition:background .25s ease,border-color .25s ease}
+    .house-cell.is-filled{background:#fff1f7;border:1px solid #e4a9c6}
+    .house-card{width:100%;height:100%;min-width:0;display:flex;align-items:center;gap:10px;padding:8px 13px;background:linear-gradient(125deg,#fff0f6,#fce3ee);color:#4a2940;font-size:.8rem;font-weight:800;line-height:1.35;opacity:0;transform:translateY(16px) scale(.94);transition:opacity .42s ease,transform .46s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+    .house-cell.is-filled .house-card{opacity:1;transform:translateY(0) scale(1)}
+    .house-card-symbol{flex-shrink:0;display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#fff;color:#b83270;font-size:1.1rem;border:1px solid #f5c7dd}
+    .house-base{height:15px;width:93%;max-width:555px;border:1px solid #d787ae;background:#eeb2ce;border-radius:0 0 10px 10px}
+    .house-announce{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+    @media(max-width:900px){.house-layout{grid-template-columns:minmax(215px,.85fr) minmax(380px,1.15fr);gap:12px}.house-shell{padding:17px}.house-roof{height:94px}.house-frame{min-height:216px}.house-card{padding:7px 8px;gap:6px;font-size:.7rem}.house-card-symbol{width:26px;height:26px}}
+    @media(max-width:740px){.house-layout{grid-template-columns:1fr;gap:12px}.house-left{padding:2px}.house-pick{max-width:100%}.house-story{max-width:none;margin:11px 0 8px}.house-stage{max-width:580px;margin:0 auto;width:100%}.house-roof{height:auto;max-height:118px}.house-frame{min-height:229px}.house-card{font-size:.77rem}}
+    @media(max-width:520px){.capability-section{padding:32px 0}.house-shell{padding:12px}.house-roof{max-height:92px}.house-frame{width:95%;min-height:216px;padding:6px;gap:5px}.house-cell{min-height:62px}.house-card{padding:5px 7px;gap:5px;font-size:.67rem}.house-card-symbol{width:23px;height:23px;font-size:.95rem}.house-base{width:99%}.house-project-group{grid-template-columns:80px minmax(0,1fr)}.house-story{padding:11px 12px}}
+    @media(prefers-reduced-motion:reduce){.house-card,.house-cell{transition:none}}
     .chip{background:white;border:1px solid #cbd5e1;border-radius:100px;padding:7px 12px;font-size:.74rem;font-weight:750;color:#475569}
     .chip.active,.chip[aria-pressed="true"]{background:#fbcfe8;border-color:#f9a8d4;color:#831843}.chip:hover{border-color:#f472b6}
     .evidence{max-height:325px;overflow-y:auto;display:grid;gap:9px;padding-right:4px}
@@ -83,9 +110,9 @@
     .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.contact-link{display:flex;align-items:center;justify-content:space-between;gap:14px;background:white;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none}.contact-link:hover{border-color:#f472b6;background:#fff7fb}
     .process-card{height:100%}.process-card .step-no{color:#9d174d;font-size:.8rem;font-weight:800}.process-card p{font-size:.83rem}.process-card .tool-line{font-size:.76rem;font-weight:700;color:#9d174d}
     .footer{background:white;border-top:1px solid var(--line);padding:27px 0;color:var(--muted);font-size:.78rem}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    @media(max-width:900px){.nav{gap:0}.nav a{padding:7px;font-size:.74rem}.hero{grid-template-columns:1.3fr .7fr;gap:27px}.radar-body{grid-template-columns:1fr}.detail-layout{grid-template-columns:1fr}.sticky-aside{position:static}.timeline{gap:9px}}
-    @media(max-width:680px){.header-row{min-height:64px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:64px;background:white;padding:14px 24px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}.nav.open{display:flex;flex-direction:column;align-items:stretch}.nav a{font-size:.86rem;padding:11px}.hero{grid-template-columns:1fr;padding:34px 0}.portrait{max-width:270px;min-height:240px;max-height:330px;grid-row:1}.grid.two,.grid.three,.contact-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr;gap:16px}.timeline:before{top:15px;left:21px;bottom:15px;right:auto;width:2px;height:auto}.time-step{display:grid;grid-template-columns:50px 1fr;grid-template-rows:auto auto;column-gap:10px}.time-step .time-dot{grid-row:1/3;margin-bottom:0}.time-step h3{margin:0}.radar-controls{grid-template-columns:1fr}.section{padding:38px 0}.page-head{padding:38px 0 16px}.radar-shell{padding:13px}.panel{padding:19px}.detail-banner{padding:20px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.radar-feature{transition:none}}
+    @media(max-width:900px){.nav{gap:0}.nav a{padding:7px;font-size:.74rem}.hero{grid-template-columns:1.3fr .7fr;gap:27px}.detail-layout{grid-template-columns:1fr}.sticky-aside{position:static}.timeline{gap:9px}}
+    @media(max-width:680px){.header-row{min-height:64px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:64px;background:white;padding:14px 24px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}.nav.open{display:flex;flex-direction:column;align-items:stretch}.nav a{font-size:.86rem;padding:11px}.hero{grid-template-columns:1fr;padding:34px 0}.portrait{max-width:270px;min-height:240px;max-height:330px;grid-row:1}.grid.two,.grid.three,.contact-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr;gap:16px}.timeline:before{top:15px;left:21px;bottom:15px;right:auto;width:2px;height:auto}.time-step{display:grid;grid-template-columns:50px 1fr;grid-template-rows:auto auto;column-gap:10px}.time-step .time-dot{grid-row:1/3;margin-bottom:0}.time-step h3{margin:0}.section{padding:38px 0}.page-head{padding:38px 0 16px}.panel{padding:19px}.detail-banner{padding:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
 </head>
 <body>
@@ -109,13 +136,13 @@
 <script>
 'use strict';
 // Copy your existing profile.jpg and CV_Nurul_Nadjmie.pdf next to this HTML file.
-// All portfolio navigation, filtering and the radar use local JavaScript; no backend required.
+// Portfolio navigation, project filters, and the animated Capability Set house use local JavaScript; no backend required.
 const CONTACT={email:'nrlndjm@gmail.com',whatsapp:'https://wa.me/6281273901463?text=Halo%20Nadjmie%2C%20saya%20tertarik%20untuk%20berdiskusi%20peluang%20kerja%20sama.',linkedin:'https://www.linkedin.com/in/nurulnadjmie/',github:'https://github.com/iyunnurul58-blip',cv:'CV_Nurul_Nadjmie.pdf'};
-const AXES=['Business & Systems','Research & Discovery','Product Strategy','Planning & Delivery','Data & Analytics','AI Prototyping'];
-// Radar values mean 0=no documented activity, 1=supporting, 2=core to that PROJECT, not a person's proficiency.
-// Evidence strings make the Core/Supporting activity filters meaningful and auditable.
+const AXES=['Business Understanding','Research & Discovery','Product Strategy','Planning & Delivery','Data & Analytics','AI-Assisted Building'];
+// Capability presence mapping requested for eight projects: 1 = represented, 0 = not represented.
+// It is a thematic visualization, not a measured proficiency score.
 const PROJECTS=[
- {id:'sprity',name:'Sprity Digital Op Shop',category:'Product / PM',kind:'Dibimbing.id final project',when:'Sep–Dec 2026',featured:true,full:true,score:[2,2,2,2,0,2],
+ {id:'sprity',name:'Sprity Digital Op Shop',category:'Product / PM',kind:'Dibimbing.id final project',when:'Sep–Dec 2026',featured:true,full:true,score:[1,1,1,1,1,1],
   summary:'A digital opportunity shop platform transforming preloved clothing into social impact through managed doorstep pickups, quality verification, and transparent charity funding.',
   short:'From donation challenges to a functional digital opportunity shop prototype.',
   role:'Product development · Bootcamp project',
@@ -131,7 +158,7 @@ const PROJECTS=[
   ],
   resources:[['Open Working Prototype','https://iyunnurul58-blip.github.io/sprity/'],['Existing Sprity Case Study','https://iyunnurul58-blip.github.io/Sprity-Portfolio/']]
  },
- {id:'sociolla',name:'Sociolla — Click & Collect',category:'Product / PM',kind:'Dibimbing.id case study',when:'2026',featured:true,full:true,score:[1,2,2,2,0,0],
+ {id:'sociolla',name:'Sociolla — Click & Collect',category:'Product / PM',kind:'Dibimbing.id case study',when:'2026',featured:true,full:true,score:[1,1,1,1,1,1],
   summary:'An academic process improvement case study exploring a faster and clearer online-to-offline Click & Collect experience.',
   short:'Improving order confirmation, inventory visibility and the pickup journey.',role:'Project Manager · Academic case study',
   evidence:['Understanding the online-to-offline shopping process','Problem research, AS-IS journey and testing','TO-BE flow and proposed product enhancements','WBS, Gantt chart and requirements documents','—','—'],
@@ -145,7 +172,7 @@ const PROJECTS=[
   ],
   resources:[['Existing Sociolla Presentation','https://iyunnurul58-blip.github.io/Portfolio/sociolla.html'],['AS-IS Interactive Prototype','https://app.visily.ai/projects/09f9a863-7891-46e4-9bc3-093a459db17c/boards/2639991/presenter?play-mode=All+screens'],['TO-BE Interactive Prototype','https://app.visily.ai/projects/09f9a863-7891-46e4-9bc3-093a459db17c/boards/2646347/presenter?play-mode=All+screens'],['Business Understanding','https://drive.google.com/file/d/1qbo3Ub8LDP_8o7ysOplHdUFj4g7yOO7d/view?usp=drive_link'],['BRD & FSD Docs','https://drive.google.com/file/d/1Y4jLHpfu62I3iB36YNdLgk8iegiSSzJX/view?usp=drive_link'],['PRD & Experiments','https://drive.google.com/file/d/1njoT1_iUh-x1Qk4XQtIyTQCnE6_9ddWF/view?usp=drive_link'],['Product Research','https://drive.google.com/file/d/17BC_LcKaDMpJhuJ2wPj2iI1VaXCysWHt/view?usp=drive_link'],['Project Quality Report','https://drive.google.com/file/d/1az8zlvQkJAZLqt35kVTGhOR08AHUaEqP/view?usp=drive_link'],['WBS Sheet','https://docs.google.com/spreadsheets/d/1xnpzRAp_zBl1gS8d_GFAu_lhMX6RfxOv/edit?usp=sharing'],['Gantt Chart Sheet','https://docs.google.com/spreadsheets/d/1rAtn97Uy_DTcWMZVVJyHCVNp9vwAyUFd/edit?usp=drive_link']]
  },
- {id:'club-connect',name:'University Club Connect',category:'Product / PM',kind:'University group project',when:'Feb–Jun 2023',featured:true,full:true,score:[1,2,2,1,0,0],
+ {id:'club-connect',name:'University Club Connect',category:'Product / PM',kind:'University group project',when:'Feb–Jun 2023',featured:true,full:true,score:[1,1,1,0,0,0],
   summary:'A centralized student club and activity discovery concept, created in a multidisciplinary university group using the Jobs-to-Be-Done framework.',
   short:'Helping students discover university communities across fragmented platforms.',role:'Research, ideation & prototype · University group project',
   evidence:['University activity/club operating context','Interviews with club representatives, friends and international students','JTBD, feature ideation and product concept','Group coordination, clickable Figma prototype and pitch','—','—'],
@@ -159,34 +186,34 @@ const PROJECTS=[
   ],
   resources:[['Original Figma Design','https://www.figma.com/design/ychBtVAFYQwyiNCnjoqn4S/Denden?node-id=0-1'],['Interactive Prototype','https://engage-my-campus.lovable.app/'],['Related Documents','https://drive.google.com/drive/folders/139VEp6nXHxzJw6lpG2pecXuNqSx_W3gP?usp=drive_link']]
  },
- {id:'no-code',name:'No-Code Website Development',category:'Product / PM',kind:'University summer-course project',when:'Jan 2024',featured:false,full:false,score:[0,0,1,1,0,2],
+ {id:'no-code',name:'No-Code Website Development',category:'Product / PM',kind:'University summer-course project',when:'Jan 2024',featured:false,full:false,score:[1,1,0,0,0,1],
   summary:'Created a five-page digital pet adoption guide using no-code and AI-assisted tools during a short university course.',short:'Rapid website experimentation with Framer and generative AI.',role:'University project',
   evidence:['—','—','Digital guide concept and interactive feature planning','Three-day website delivery','—','Framer, ChatGPT, generated content and interactive Typeform'],
   tools:['Framer','ChatGPT','Typeform','Generative media','Website publishing'],
   sections:[['Project Objective','Create a five-page digital dog adoption guide that helps prospective owners find consolidated information, while exploring how no-code and AI can reduce the difficulty of building a website.'],['Approach & Outputs','I used Framer for the website, ChatGPT and generative tools to assist with content and visuals, and Typeform for an interactive assessment. I published the site and prepared a video walkthrough.'],['What I Learned','This project introduced a practical way to rapidly prototype and publish a digital experience without first mastering traditional coding.']],
   resources:[['Open Framer Website','https://whatdogshouldiget.framer.website/'],['Video Walkthrough','https://www.loom.com/share/21231ad9956e4a4793ee86ee73fb6fab'],['Related Documents','https://drive.google.com/drive/folders/17t24i5MnhzLozCQ8YnCIrViAwLWu-zCH?usp=drive_link']]
  },
- {id:'asset-quality',name:'Asset Quality Review',category:'Data / BA',kind:'Master’s coursework',when:'Aug–Nov 2024',featured:false,full:false,score:[1,1,0,0,2,0],
+ {id:'asset-quality',name:'Asset Quality Review',category:'Data / BA',kind:'Master’s coursework',when:'Aug–Nov 2024',featured:false,full:false,score:[0,0,1,0,1,0],
   summary:'Compared US stocks and ETFs across market conditions, applying quantitative models and interpreting risk-return behavior.',short:'Quantitative analysis across stocks, ETFs and market regimes.',role:'Business Analysis · Academic project',
   evidence:['Asset-management decision context','Exploration of market regimes and performance patterns','—','—','OLS, logistic regression, K-Means and PCA analysis','—'],
   tools:['OLS','Logistic regression','K-Means','PCA','Financial data'],
   sections:[['Business Question','Explore how US-listed stocks and ETFs behaved across COVID and non-COVID periods, including differences in performance, risk and factor exposure.'],['Analysis & Approach','The original course case study describes cleaning market observations and applying descriptive analysis, OLS, logistic regression, K-Means clustering and PCA.'],['Findings & Recommendations','The analysis identified greater stability in ETFs than stocks in the studied sample, explored different market regimes and produced recommendations relevant to portfolio risk and asset selection.']],
   resources:[['Related Research Documents','https://drive.google.com/drive/folders/1DBmB0Kl0TOtYaaYROFFEwXOad8vSfcvY?usp=drive_link']]
  },
- {id:'merchandise',name:'Google Merchandise Store Performance',category:'Data / BA',kind:'Master’s coursework',when:'May–Jun 2024',featured:false,full:false,score:[2,1,0,0,2,0],
+ {id:'merchandise',name:'Google Merchandise Store Performance',category:'Data / BA',kind:'Master’s coursework',when:'May–Jun 2024',featured:false,full:false,score:[0,0,1,0,1,0],
   summary:'Analyzed Google Merchandise Store performance across products, customers, revenue, conversions and acquisition channels.',short:'Connecting store performance metrics to business recommendations.',role:'Customer/Business Analysis · Academic project',
   evidence:['Revenue, product mix and acquisition-channel business questions','Investigation of transaction and customer behavior patterns','—','—','Looker Studio performance and campaign analysis','—'],
   tools:['Looker Studio','Customer analytics','Conversion analysis','Business recommendations'],
   sections:[['Business Question','The coursework examined the relationship between traffic, transactions, revenue and average order value, with attention to product mix and acquisition performance.'],['Analysis & Approach','I examined store behavior and transaction metrics, product categories, demographic segments and marketing channels.'],['Findings & Recommendations','The original analysis compared direct and social acquisition, product performance and campaign efficiency, producing suggested actions for product mix and marketing allocation.']],
   resources:[['Related Analysis Documents','https://drive.google.com/drive/folders/1qQfWOpYDCo4xSnTruuaDE79LBoEvpg5z?usp=drive_link']]
  },
- {id:'adidas',name:'Adidas US Sales Dashboard',category:'Data / BA',kind:'Dibimbing.id project',when:'Jun 2026',featured:false,full:false,score:[2,1,0,0,2,0],
+ {id:'adidas',name:'Adidas US Sales Dashboard',category:'Data / BA',kind:'Dibimbing.id project',when:'Jun 2026',featured:false,full:false,score:[0,0,1,0,1,0],
   summary:'Built an interactive Excel dashboard to evaluate product category performance, revenue trends and regional metrics.',short:'Turning US sales data into business insights with Excel.',role:'Business Analysis · Bootcamp project',
   evidence:['Category, revenue and regional sales performance questions','Exploration of cross-dimensional sales patterns','—','—','Excel Pivot Tables, Pivot Charts and dynamic slicers','—'],
   tools:['Excel','Pivot Tables','Pivot Charts','Slicers','Business analysis'],
   sections:[['Objective','Process and analyze the Adidas US Sales dataset to evaluate product category performance, revenue trends and regional metrics.'],['Approach & Deliverables','I developed an interactive Microsoft Excel dashboard with dynamic Pivot Tables, Pivot Charts and slicers for cross-dimensional analysis.'],['Insights & Recommendations','I synthesized the data into key business insights and evidence-based recommendations for strategic decision-making.']],resources:[]
  },
- {id:'reading-tracker',name:'Reading Tracker',category:'Personal',kind:'Personal-use project',when:'2026',featured:false,full:false,score:[1,0,1,1,1,2],
+ {id:'reading-tracker',name:'Reading Tracker',category:'Personal',kind:'Personal-use project',when:'2026',featured:false,full:false,score:[0,1,0,1,0,1],
   summary:'Built a personal PWA to record reading lists, chapters, reading duration and mood changes before and after a reading session.',short:'A personal reading journal built with AI-assisted code and Google Sheets.',role:'Personal product experiment',
   evidence:['—','—','Requirements based on a personal reading need','Check-in/out flow, session recording and release to phone','Genre, duration and mood-impact dashboard charts','AI-assisted HTML/JS, Chart.js, Google Sheets and Apps Script'],
   tools:['AI-assisted HTML/JS','Chart.js','Google Sheets','Apps Script','GitHub Pages','PWA'],
@@ -240,7 +267,7 @@ const ORGANIZATIONS=[
 ];
 
 const app=document.getElementById('content');
-const ui={project:'all',axis:2,activity:'all',filter:'All'};
+const ui={project:'all',filter:'All'};
 function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function extLink(label,url,cls='link'){return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;}
 function tagList(values){return `<div class="tag-row">${values.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`;}
@@ -257,35 +284,100 @@ function journey(){const steps=[
 function home(){return `
  ${wrap(`<section class="hero"><div><div class="eyebrow">Hi, I'm Nurul.</div><h1>From Business Understanding to Product Execution.</h1><p><strong>I connect business understanding, analytical thinking, and product execution to turn problems into practical solutions.</strong></p><p>My journey began in Accounting, where I discovered how business systems can transform everyday processes and support better decisions. That interest led me to pursue a Master's in Business Analytics, before discovering my passion for product development through university projects and hands-on experiences.</p><p>Today, I'm pursuing a career in Product and Project Management, combining business knowledge, research, project planning, and AI-assisted prototyping to bring ideas closer to reality.</p><div class="btn-row"><a class="btn" href="#/projects">Explore My Work →</a><a class="btn outline" href="#/about">Read My Story</a></div></div><div class="portrait"><span class="fallback" aria-hidden="true">N.</span><img src="profile.jpg" alt="Portrait of Nurul Nadjmie" onerror="this.hidden=true"></div></section>`)}
  <section class="section">${wrap(`${sectionHead('01 · My Journey','How I Got Here',"My journey into product and project management hasn't followed a straight line. Each experience contributed to how I understand business and user problems.")}${journey()}<div class="btn-row"><a class="link" href="#/about">Read My Full Story →</a></div>`)}</section>
- <section class="section alt">${wrap(`${sectionHead('02 · Capabilities','An Integrated Capability Set','Each experience developed a different part of my skill set. Together, they allow me to approach product and business problems from multiple perspectives.')}<div id="radar-root"></div>`)}</section>
+ <section class="section alt capability-section">${wrap(`${sectionHead('02 · Capabilities','Capability Set','These are the building blocks I have developed through my journey and applied across different projects. Select a project to see how they come together.')}<div id="house-root"></div>`)}</section>
  <section class="section">${wrap(`${sectionHead('03 · Selected Work','Putting Knowledge Into Practice','Three academic projects demonstrating how I approach product discovery, process improvement and solution development.')}<div class="grid three">${PROJECTS.filter(p=>p.featured).map(projectCard).join('')}</div><div class="btn-row"><a class="btn outline" href="#/projects">Explore All Eight Projects →</a></div>`)}</section>
  <section class="section alt">${wrap(`${sectionHead('04 · How I Build','From Ideas to Working Prototypes','I use AI to brainstorm, review ideas, iterate designs, build functional prototypes and evaluate the results.')}<div class="grid three"><div class="panel"><h3>Explore & Define</h3><p>Research needs, map workflows and plan requirements.</p></div><div class="panel"><h3>Design & Build</h3><p>Translate documented requirements into interfaces and AI-assisted code.</p></div><div class="panel"><h3>Connect & Improve</h3><p>Work with Google Sheets, Apps Script, deployment and iterative testing.</p></div></div><div class="btn-row"><a class="link" href="#/how-i-build">Explore My Workflow →</a></div>`)}</section>
  <section class="section">${wrap(`<div class="soft-panel" style="text-align:center"><div class="eyebrow">05 · Let's Connect</div><h2>Interested in Working Together?</h2><p>I'm interested in Product Management, Project Management, Business Analysis and related opportunities.</p><a class="btn" href="#/contact">Get in Touch →</a></div>`)}</section>`;}
 
-// Radar: every project can be selected, each project gets a different polygon.
-// On a single project selection, the faint outline remains the combined portfolio coverage.
+// Brief, evidence-conscious explanations, shown beside the house.
+// These describe how projects relate to the capabilities, not measured skill levels.
+const HOUSE_STORIES = {
+  sprity: 'I explored donation and shopping needs, shaped the product concept, documented workflows, and built an AI-assisted prototype with Google Sheets and impact reporting.',
+  sociolla: 'I studied the Click & Collect journey, proposed improvements, prepared requirements and a delivery plan, and evaluated the solution through interactive prototypes and coursework testing.',
+  'club-connect': 'Our team investigated fragmented student-club communication through interviews and Jobs-to-Be-Done, then shaped and pitched a centralized discovery concept.',
+  'no-code': 'I explored the needs of prospective dog owners and turned a digital-guide concept into a published website using Framer, ChatGPT and interactive tools.',
+  'asset-quality': 'I analyzed stock and ETF performance across market conditions, then used the findings to inform portfolio selection and risk-related recommendations.',
+  merchandise: 'I analyzed customer behavior, product mix, revenue and acquisition channels, translating performance findings into product and marketing recommendations.',
+  adidas: 'I built an Excel sales dashboard to investigate categories, regions and revenue trends, then translated the results into business recommendations.',
+  'reading-tracker': 'Starting from my own reading-tracking needs, I planned the check-in/out flow and iterated an AI-assisted PWA with session data and a personal dashboard.'
+};
+const HOUSE_GROUPS = [
+  ['Product & PM', 'Sprity · Sociolla · University Club Connect · No-Code Website'],
+  ['Data & BA', 'Asset Quality Review · Google Merchandise Store · Adidas US Sales Dashboard'],
+  ['Personal', 'Reading Tracker']
+];
+// Each capability is one structural building block in the house.
+// The first view includes all eight projects, so all six blocks are visible.
 function getProject(id){return PROJECTS.find(p=>p.id===id);}
-function combinedScores(){return AXES.map((_,i)=>Math.max(...PROJECTS.map(p=>p.score[i])));}
-function currentScores(){return ui.project==='all'?combinedScores():getProject(ui.project).score;}
-function xy(i,s){const a=-Math.PI/2+i*Math.PI/3;return [235+Math.cos(a)*s*58,175+Math.sin(a)*s*58];}
-function radarPolygon(arr){return arr.map((s,i)=>xy(i,s).map(n=>n.toFixed(1)).join(',')).join(' ');}
-function radarSVG(){const values=currentScores();const positions=[
- [235,22,'middle',['Business & Systems']],
- [370,99,'start',['Research &','Discovery']],
- [370,255,'start',['Product Strategy']],
- [235,340,'middle',['Planning & Delivery']],
- [100,255,'end',['Data & Analytics']],
- [100,99,'end',['AI Prototyping']]
-];return `<svg class="radar-svg" viewBox="0 0 470 365" role="group" aria-label="Capability chart. Use the capability names to choose evidence.">
- ${[1,2].map(n=>`<polygon class="radar-mesh" points="${radarPolygon(Array(6).fill(n))}"></polygon>`).join('')}
- ${AXES.map((_,i)=>`<line x1="235" y1="175" x2="${xy(i,2)[0]}" y2="${xy(i,2)[1]}" stroke="#d5dbe4"></line>`).join('')}
- ${ui.project!=='all'?`<polygon class="radar-outline" points="${radarPolygon(combinedScores())}"></polygon>`:''}
- <polygon class="radar-feature" id="radar-current-shape" points="${radarPolygon(values)}"></polygon>
- ${values.map((s,i)=>s?`<circle cx="${xy(i,s)[0]}" cy="${xy(i,s)[1]}" r="4" fill="#be185d" stroke="white" stroke-width="1.5"></circle>`:'').join('')}
- ${positions.map(([x,y,anchor,lines],i)=>`<g class="axis-btn ${ui.axis===i?'selected':''}" data-axis="${i}" tabindex="0" role="button" aria-label="Show ${esc(AXES[i])} project evidence" aria-pressed="${ui.axis===i}"><circle cx="${i===0||i===3?x:(i===1||i===2?360:110)}" cy="${i===0?42:i===3?316:y+2}" r="9" fill="transparent"></circle><text x="${x}" y="${y}" text-anchor="${anchor}">${lines.map((line,j)=>`<tspan x="${x}" dy="${j?14:0}">${esc(line)}</tspan>`).join('')}</text></g>`).join('')}
- </svg>`;}
-function radarEvidence(){let matches=PROJECTS.filter(p=>p.score[ui.axis]>0);if(ui.activity==='core')matches=matches.filter(p=>p.score[ui.axis]===2);if(ui.activity==='supporting')matches=matches.filter(p=>p.score[ui.axis]===1);matches.sort((a,b)=>Number(b.id===ui.project)-Number(a.id===ui.project));return `<div class="panel" style="box-shadow:none;background:#fff"><div class="eyebrow">Capability Evidence</div><h3 style="margin-bottom:5px">${esc(AXES[ui.axis])}</h3><p class="small">Evidence across all eight projects${ui.project==='all'?'':`; selected project: <strong>${esc(getProject(ui.project).name)}</strong>`}.</p><div class="capability-tabs" aria-label="Evidence filters">${[['all','All evidence'],['core','Core activity'],['supporting','Supporting activity']].map(([k,n])=>`<button type="button" class="chip ${ui.activity===k?'active':''}" data-activity="${k}" aria-pressed="${ui.activity===k}">${n}</button>`).join('')}</div><div class="evidence">${matches.length?matches.map(p=>`<a class="evidence-row" href="#/project/${p.id}"><strong>${esc(p.name)} ${ui.project===p.id?'· Selected':''}</strong><span class="status">${p.score[ui.axis]===2?'Core activity':'Supporting activity'}</span><p>${esc(p.evidence[ui.axis])}</p></a>`).join(''):'<p class="small muted">No projects match this evidence filter.</p>'}</div></div>`;}
-function renderRadar(){const root=document.getElementById('radar-root');if(!root)return;const selected=ui.project==='all'?null:getProject(ui.project);root.innerHTML=`<div class="panel radar-shell"><div class="radar-controls"><div><label class="label" for="project-radar-select">Explore capability coverage by project</label><select class="select" id="project-radar-select"><option value="all">All eight projects — Combined view</option>${PROJECTS.map(p=>`<option value="${p.id}" ${ui.project===p.id?'selected':''}>${esc(p.name)}</option>`).join('')}</select></div><div class="micro">${selected?'Individual project':'Combined project coverage'}</div></div><div class="radar-body"><div>${radarSVG()}<p class="micro" style="text-align:center;margin-top:-2px">${selected?'Selected project compared with combined coverage':'Combined capability coverage across all eight projects'}</p><div class="capability-tabs" style="justify-content:center">${AXES.map((n,i)=>`<button type="button" class="chip ${ui.axis===i?'active':''}" data-axis="${i}" aria-pressed="${ui.axis===i}">${esc(n)}</button>`).join('')}</div></div><div><h3>${selected?esc(selected.name):'My Combined Capability Coverage'}</h3><p class="small">${selected?esc(selected.summary):'Different academic and personal projects demonstrate complementary capabilities. The combined radar highlights the breadth of project work.'}</p>${radarEvidence()}</div></div></div>`;}
+function houseScores(){
+  if(ui.project==='all') return AXES.map((_,i)=>Number(PROJECTS.some(p=>p.score[i]>0)));
+  const selected=getProject(ui.project);
+  return selected ? selected.score : AXES.map(()=>0);
+}
+const HOUSE_SYMBOLS=['◇','◎','✧','▤','▥','✦'];
+// Six panels make up the house: two upper, two middle, two foundation panels.
+const HOUSE_POSITIONS=[1,5,2,3,0,4];
+function renderHouse(){
+  const root=document.getElementById('house-root');
+  if(!root)return;
+  root.innerHTML=`<div class="panel house-shell">
+    <div class="house-layout">
+      <div class="house-left">
+        <div class="house-pick">
+          <label class="label" for="house-project-select">Explore by project</label>
+          <select class="select" id="house-project-select">
+            <option value="all">All Projects (8)</option>
+            ${PROJECTS.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}
+          </select>
+          <div class="house-story" id="house-story" aria-live="polite"></div>
+          <a href="#/projects" class="link house-nav">Explore projects →</a>
+        </div>
+      </div>
+      <div class="house-stage" role="img" aria-label="A house assembled from six capability cards">
+        <svg class="house-roof" viewBox="0 0 610 110" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M20 109 L305 8 L590 109 Z" fill="#fff0f6" stroke="#d99eb9" stroke-width="4" stroke-linejoin="round" />
+          <path d="M52 108 L305 22 L558 108" fill="none" stroke="#f5cee0" stroke-width="2" />
+        </svg>
+        <div class="house-frame" aria-hidden="true">
+          ${HOUSE_POSITIONS.map(i=>`<div class="house-cell" data-slot="${i}">
+            <div class="house-card">
+              <span class="house-card-symbol">${HOUSE_SYMBOLS[i]}</span>
+              <span>${esc(AXES[i])}</span>
+            </div>
+          </div>`).join('')}
+        </div>
+        <div class="house-base" aria-hidden="true"></div>
+      </div>
+    </div>
+    <span class="house-announce" id="house-announce" aria-live="polite"></span>
+  </div>`;
+  document.getElementById('house-project-select').value=ui.project;
+  updateHouse();
+}
+function updateHouse(){
+  const root=document.getElementById('house-root');
+  if(!root)return;
+  const scores=houseScores();
+  scores.forEach((score,i)=>{
+    const slot=root.querySelector(`[data-slot="${i}"]`);
+    slot.classList.toggle('is-filled',score>0);
+  });
+  const project=ui.project==='all'?null:getProject(ui.project);
+  const story=document.getElementById('house-story');
+  if(project){
+    story.innerHTML=`<div class="house-story-title">${esc(project.name)}</div>
+      <p class="house-story-copy">${esc(HOUSE_STORIES[project.id]||project.short)}</p>`;
+  }else{
+    story.innerHTML=`<div class="house-story-title">8 projects, 6 complementary capabilities</div>
+      <p class="house-story-copy">From product discovery and planning to analytics and AI-assisted building, different projects contribute different foundations.</p>
+      <div class="house-project-groups">
+      ${HOUSE_GROUPS.map(([group,names])=>`<div class="house-project-group"><strong>${esc(group)}</strong><span>${esc(names)}</span></div>`).join('')}
+      </div>`;
+  }
+  document.getElementById('house-announce').textContent=project
+    ?`${project.name}: ${scores.filter(Boolean).length} capabilities shown.`
+    :'All projects: all six capabilities shown.';
+}
 
 function about(){const story=[
  ['Accounting — Where My Curiosity Began',"My interest in technology began during my undergraduate Accounting studies, when I was introduced to an ERP simulation system in a practical class in my fifth semester. For the first time, I saw how information could flow across business processes, support accounting activities, and help businesses make better decisions. What interested me wasn't just the accounting output, but the system behind it."],
@@ -313,12 +405,14 @@ function routeParts(){return (location.hash||'#/home').replace(/^#\//,'').split(
 function render(){const [page,id]=routeParts();if(page==='home')app.innerHTML=home();else if(page==='about')app.innerHTML=about();else if(page==='projects')app.innerHTML=projectsPage();else if(page==='project')app.innerHTML=projectDetail(id);else if(page==='how-i-build')app.innerHTML=howIBuild();else if(page==='experience')app.innerHTML=experience();else if(page==='contact')app.innerHTML=contact();else app.innerHTML=home();
  const active=page==='project'?'projects':page;document.querySelectorAll('[data-nav]').forEach(link=>{if(link.dataset.nav===active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
  document.title=(page==='project'?getProject(id)?.name:({home:'Home',about:'About Me',projects:'Projects','how-i-build':'How I Build',experience:'Experience',contact:'Contact'})[page]||'Portfolio')+' | Nurul Nadjmie';
- document.getElementById('navigation').classList.remove('open');document.getElementById('menu-toggle').setAttribute('aria-expanded','false');if(page==='home')renderRadar();window.scrollTo(0,0);
+ document.getElementById('navigation').classList.remove('open');document.getElementById('menu-toggle').setAttribute('aria-expanded','false');if(page==='home')renderHouse();window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',render);
-document.addEventListener('change',e=>{if(e.target?.id==='project-radar-select'){ui.project=e.target.value;ui.activity='all';renderRadar();}});
-document.addEventListener('click',e=>{const btn=e.target.closest('[data-axis],[data-activity],[data-filter]');if(!btn)return;if(btn.hasAttribute('data-axis')){ui.axis=Number(btn.dataset.axis);ui.activity='all';renderRadar();}else if(btn.hasAttribute('data-activity')){ui.activity=btn.dataset.activity;renderRadar();}else if(btn.hasAttribute('data-filter')){ui.filter=btn.dataset.filter;app.innerHTML=projectsPage();}});
-document.addEventListener('keydown',e=>{const btn=e.target.closest('[data-axis]');if(btn && (e.key==='Enter'||e.key===' ')){e.preventDefault();ui.axis=Number(btn.dataset.axis);ui.activity='all';renderRadar();const restored=document.querySelector(`.axis-btn[data-axis="${ui.axis}"]`);if(restored)restored.focus();}});
+document.addEventListener('change',e=>{if(e.target?.id==='house-project-select'){ui.project=e.target.value;updateHouse();}});
+document.addEventListener('click',e=>{
+  const filter=e.target.closest('[data-filter]');
+  if(filter){ui.filter=filter.dataset.filter;app.innerHTML=projectsPage();return;}
+});
 document.getElementById('menu-toggle').addEventListener('click',()=>{const nav=document.getElementById('navigation');const open=nav.classList.toggle('open');document.getElementById('menu-toggle').setAttribute('aria-expanded',String(open));});
 if(!location.hash)location.hash='#/home';else render();
 </script>
